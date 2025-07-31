@@ -88,11 +88,6 @@ header {
   height: var(--nav-height);
 }
 
-header li a:hover {
-  text-decoration: none;
-  cursor: pointer;
-}
-
 header .header,
 footer .footer {
   visibility: hidden;
@@ -168,6 +163,11 @@ a:any-link {
 a:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
+}
+
+header li a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* buttons */
