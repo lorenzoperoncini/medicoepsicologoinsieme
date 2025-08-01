@@ -30,6 +30,32 @@ header nav[aria-expanded='true'] {
   min-height: 100dvh;
 }
 
+header a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+header li.active {
+  text-decoration: underline;
+}
+
+header nav .nav-tools .button {
+  max-width: 200px;
+  font-size: 12px;
+  padding: 5px 10px
+}
+
+header nav .nav-tools .button .icon {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+header nav[aria-expanded='true'] .button{
+  display: none;
+}
+
 @media (width >= 900px) {
   header nav {
     display: flex;
@@ -42,6 +68,12 @@ header nav[aria-expanded='true'] {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+  }
+
+  header nav .nav-tools .button {
+    max-width: unset;
+    font-size: 16px;
+    padding: 5px 12px
   }
 }
 
@@ -145,7 +177,7 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 100px;
   height: auto;
 }
 

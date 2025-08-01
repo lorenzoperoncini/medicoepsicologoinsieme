@@ -1,6 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-
+import wrapImgsInLinks from '../../scripts/extras.js';
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
@@ -104,6 +104,19 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 }
 
 /**
+ * Highlights the link with an underline when navigation section is active
+ * @param {Element} navSection The list item element of the nav section
+ */
+function toggleUnderline(navSection) {
+  const link = navSection.querySelector('a');
+  if (!link) return;
+  const currentPath = window.location.pathname;
+  if (link.getAttribute('href') && link.getAttribute('href') === currentPath) {
+    navSection.classList.add('active');
+  }
+}
+
+/**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
@@ -131,10 +144,12 @@ export default async function decorate(block) {
     brandLink.className = '';
     brandLink.closest('.button-container').className = '';
   }
+  wrapImgsInLinks(navBrand);
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+      toggleUnderline(navSection);
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {

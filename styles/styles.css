@@ -76,8 +76,14 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-xs);
   line-height: 1.6;
+}
+
+@media (width >= 900px) {
+    body {
+        font-size: var(--body-font-size-m);
+    }
 }
 
 body.appear {
@@ -163,11 +169,6 @@ a:any-link {
 a:hover {
   color: var(--link-hover-color);
   text-decoration: underline;
-}
-
-header li a:hover {
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* buttons */

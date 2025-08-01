@@ -1,3 +1,8 @@
+main > .section > div.carousel-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .carousel .carousel-slides-container {
     position: relative;
 }

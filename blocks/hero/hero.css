@@ -9,6 +9,10 @@
   min-height: 300px;
 }
 
+.hero.hp {
+  min-height: 250px;
+}
+
 .hero h1 {
   max-width: 1200px;
   margin-left: auto;
@@ -33,5 +37,9 @@
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+  }
+
+  .hero.hp {
+    min-height: 520px;
   }
 }
