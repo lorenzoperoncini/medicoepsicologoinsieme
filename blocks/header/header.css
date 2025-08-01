@@ -70,6 +70,10 @@ header nav[aria-expanded='true'] .button{
     overflow: visible;
   }
 
+  header nav[aria-expanded='true'] .button{
+    display: block;
+  }
+
   header nav .nav-tools .button {
     max-width: unset;
     font-size: 16px;
