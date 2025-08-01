@@ -1,5 +1,6 @@
 #cookie-banner {
     position: fixed;
+    flex-direction: column;
     bottom: 0;
     left: 0;
     right: 0;
@@ -29,6 +30,7 @@
 #cookie-banner p {
     margin: 0;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 #cookie-banner a {
@@ -45,4 +47,10 @@
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+@media (width >= 900px) {
+    #cookie-banner {
+        flex-direction: row;
+    }
 }
