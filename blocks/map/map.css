@@ -1,3 +1,8 @@
+.map {
+    position: relative;
+    z-index: 1;
+}
+
 .map .hidden {
     display: none;
 }
