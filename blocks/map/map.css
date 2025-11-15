@@ -1,0 +1,13 @@
+.map .hidden {
+    display: none;
+}
+
+.mappa {
+    min-height: 400px;
+}
+
+@media (width >= 900px) {
+    .mappa {
+        min-height: 600px;
+    }
+}

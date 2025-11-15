@@ -66,6 +66,15 @@ main > .section > div.carousel-wrapper {
     width: var(--slide-content-width, auto);
 }
 
+.carousel .carousel-slide .carousel-slide-content a {
+    color: white;
+    text-decoration: underline;
+}
+
+.carousel .carousel-slide .carousel-slide-content a:hover {
+    color: white;
+}
+
 .carousel .carousel-slide-indicators {
     display: flex;
     flex-wrap: wrap;
@@ -144,6 +153,10 @@ main > .section > div.carousel-wrapper {
     .carousel .carousel-navigation-buttons {
         left: 24px;
         right: 24px;
+    }
+
+    .carousel .carousel-slides {
+        overflow-x: hidden;
     }
 
     .carousel .carousel-slide .carousel-slide-content {

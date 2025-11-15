@@ -19,6 +19,11 @@
   display: block;
 }
 
+
+.columns.justify-text {
+    text-align: justify;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;

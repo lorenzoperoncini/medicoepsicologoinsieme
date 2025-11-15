@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #17b2bf;
+    background-color: #0C5F69;
     color: white;
     padding: 1em;
     display: flex;
@@ -34,13 +34,12 @@
 }
 
 #cookie-banner a {
-    color: #d15876;
     font-weight: bold;
     text-decoration: underline;
 }
 
 #accept-cookies {
-    background-color: #d15876;
+    background-color: #A02C45;
     color: white;
     border: none;
     padding: 0.5em 1em;
