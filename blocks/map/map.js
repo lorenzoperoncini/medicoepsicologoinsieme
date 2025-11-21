@@ -20,7 +20,7 @@ async function initMap(mapId, mapEntries) {
 
   const isDesktop = window.matchMedia('(min-width: 768px)').matches;
   const zoom = isDesktop ? 10 : 8.5;
-  const map = window.L.map(mapId).setView([45.4363402, 9.4595803], zoom);
+  const map = window.L.map(mapId).setView([45.6, 9.4595803], zoom);
 
   window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors',
@@ -34,6 +34,7 @@ async function initMap(mapId, mapEntries) {
       .addTo(map)
       .bindPopup(`<strong>${name}</strong><br>${address}`);
   });
+  setTimeout(() => { map.invalidateSize(); }, 200);
 }
 
 export default async function decorate(block) {
