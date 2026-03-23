@@ -157,4 +157,12 @@ async function loadPage() {
   loadDelayed();
 }
 
+export function slideBodyDown(promoBannerActive) {
+  if (promoBannerActive) {
+    document.querySelector('header').classList.add('promo-banner-active');
+  } else {
+    document.querySelector('header').classList.remove('promo-banner-active');
+  }
+}
+
 loadPage();

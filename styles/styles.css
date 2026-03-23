@@ -80,6 +80,10 @@ body {
   line-height: 1.6;
 }
 
+header.promo-banner-active {
+    padding-bottom: 70px;
+}
+
 @media (width >= 900px) {
     body {
         font-size: var(--body-font-size-m);
